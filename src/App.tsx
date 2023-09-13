@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Messages from "./components/Messages";
 import Person from "./components/Person";
+import PersonList from "./components/PersonList";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -11,6 +12,25 @@ function App() {
     last: "Rigby",
   };
 
+  const jokersArray = [
+    {
+      first: "Sal",
+      last: "Vulcano",
+    },
+    {
+      first: "James",
+      last: "Murray",
+    },
+    {
+      first: "Joe",
+      last: "Gatto",
+    },
+    {
+      first: "Brian",
+      last: "Quinn",
+    },
+  ];
+
   return (
     <>
       {!login ? (
@@ -18,12 +38,14 @@ function App() {
       ) : (
         <button onClick={() => setLogin(false)}>Log out</button>
       )}
+      <Person personObject={personObject} />
+      <br />
       <Messages
         message=" Hello and good morning"
         count={5}
         isLoggedIn={login}
       />
-      <Person personObject={personObject} />
+      <PersonList jokersArray={jokersArray} />
     </>
   );
 }
