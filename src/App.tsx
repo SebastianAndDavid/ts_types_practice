@@ -3,6 +3,7 @@ import "./App.css";
 import Messages from "./components/Messages";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -31,6 +32,8 @@ function App() {
     },
   ];
 
+  const statusArray = ["Hungry", "Satisfied", "Full"];
+
   return (
     <>
       {!login ? (
@@ -46,6 +49,7 @@ function App() {
         isLoggedIn={login}
       />
       <PersonList jokersArray={jokersArray} />
+      <Status statusArray={statusArray} />
     </>
   );
 }

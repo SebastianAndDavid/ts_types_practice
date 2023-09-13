@@ -10,7 +10,7 @@ export default function PersonList(props: jokersArrayProps) {
   return (
     <div>
       {props.jokersArray.map((joker) => (
-        <div>
+        <div key={joker.first}>
           Greetings {joker.first} {joker.last}
         </div>
       ))}
