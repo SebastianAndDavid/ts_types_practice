@@ -1,9 +1,16 @@
 import { useState } from "react";
 import "./App.css";
 import Messages from "./components/Messages";
+import Person from "./components/Person";
 
 function App() {
   const [login, setLogin] = useState(false);
+
+  const personObject = {
+    first: "David",
+    last: "Rigby",
+  };
+
   return (
     <>
       {!login ? (
@@ -16,6 +23,7 @@ function App() {
         count={5}
         isLoggedIn={login}
       />
+      <Person personObject={personObject} />
     </>
   );
 }

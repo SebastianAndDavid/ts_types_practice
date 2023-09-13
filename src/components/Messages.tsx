@@ -4,6 +4,7 @@ interface MessageProps {
   isLoggedIn: boolean;
 }
 export default function Messages(props: MessageProps) {
+  console.log("msg props", props);
   return (
     <div>
       {props.isLoggedIn ? (
