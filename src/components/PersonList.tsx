@@ -6,10 +6,14 @@ interface jokersArrayProps {
 }
 
 export default function PersonList(props: jokersArrayProps) {
-  console.log("props", props);
+  console.log("props", props.jokersArray);
   return (
     <div>
-      <div>{props.jokersArray[0].first}</div>
+      {props.jokersArray.map((joker) => (
+        <div>
+          Greetings {joker.first} {joker.last}
+        </div>
+      ))}
     </div>
   );
 }
