@@ -4,7 +4,7 @@ import Messages from "./components/Messages";
 function App() {
   return (
     <>
-      <Messages message="Good morning" />
+      <Messages message=" Hello and good morning" count={5} />
     </>
   );
 }
