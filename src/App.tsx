@@ -6,7 +6,11 @@ function App() {
   const [login, setLogin] = useState(false);
   return (
     <>
-      <button onClick={() => setLogin(true)}>Login</button>
+      {!login ? (
+        <button onClick={() => setLogin(true)}>Login</button>
+      ) : (
+        <button onClick={() => setLogin(false)}>Log out</button>
+      )}
       <Messages
         message=" Hello and good morning"
         count={5}
